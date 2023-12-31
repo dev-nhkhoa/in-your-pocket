@@ -1,6 +1,8 @@
 import { Box } from '@mui/material'
 import TableButton from './TableButton'
 
+//TODO: XỬ LÍ NHẬP SỐ TỪ TABLE
+
 const InputTable = () => {
   const buttonWidth = '60px'
   const buttonHeight = '60px'

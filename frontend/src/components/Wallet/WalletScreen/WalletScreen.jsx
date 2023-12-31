@@ -13,7 +13,7 @@ const WalletScreen = () => {
         flexDirection: 'column',
         backgroundColor: '#D9D9D9',
         color: '#000',
-        borderRadius: '25px',
+        borderRadius: '16px',
         p: '10px'
       }}
     >
