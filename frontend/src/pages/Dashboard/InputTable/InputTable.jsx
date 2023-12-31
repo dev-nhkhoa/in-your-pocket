@@ -26,13 +26,19 @@ const InputTable = () => {
               <TableButton name='Thu' width={'101px'} height={'25px'} />
               <TableButton name='Chi' width={'101px'} height={'25px'} />
             </Box>
-            <Box>
-              <TableButton
-                name='đ'
-                width={'210px'}
-                height={'25px'}
-                props={{ justifyContent: 'right' }}
-              />
+            <Box
+              sx={{
+                width: '210px',
+                height: '25px',
+                backgroundColor: '#000',
+                borderRadius: '16px',
+                color: '#fff',
+                display: 'flex',
+                justifyContent: 'right',
+                px: '10px'
+              }}
+            >
+              đ
             </Box>
           </Box>
         </Box>
