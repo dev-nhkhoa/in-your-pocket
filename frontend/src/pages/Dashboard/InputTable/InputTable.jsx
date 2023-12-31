@@ -4,7 +4,16 @@ import TableButton from './TableButton'
 const InputTable = () => {
   return (
     <Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '10px',
+          backgroundColor: '#D9D9D9',
+          borderRadius: '16px',
+          p: '10px'
+        }}
+      >
         {/* First row of the table */}
         <Box sx={{ display: 'flex', gap: '10px' }}>
           <TableButton name='A/C' width={'64px'} height={'64px'} />
