@@ -1,7 +1,13 @@
 import { Box, Typography } from '@mui/material'
 import ChiTieuCard from './ChiTieuCard/ChiTieuCard'
+import {
+  getAllTransactions,
+  getWalletViaIdTransaction
+} from '~/lib/wallet_data'
 
 const ChiTieuLog = () => {
+  const allTransactions = getAllTransactions()
+
   return (
     <Box
       sx={{
@@ -18,16 +24,19 @@ const ChiTieuLog = () => {
       }}
     >
       <Typography sx={{ textAlign: 'start' }}>CHI TIÊU:</Typography>
-      <ChiTieuCard
-        date='31/12/2023'
-        time='12:12'
-        money={300000}
-        note='Nhận lương tháng 12'
-      />
-      <ChiTieuCard />
-      <ChiTieuCard />
-      <ChiTieuCard />
-      <ChiTieuCard />
+      {allTransactions.length === 0 && <Typography>Chưa có dữ liệu</Typography>}
+      {allTransactions.map((transaction, index) => {
+        return (
+          <ChiTieuCard
+            key={index}
+            date={transaction.date}
+            time={transaction.time}
+            money={transaction.balanceChange}
+            note={transaction.note}
+            name={getWalletViaIdTransaction(transaction._id)}
+          />
+        )
+      })}
     </Box>
   )
 }

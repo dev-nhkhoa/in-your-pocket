@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import { formatNumber } from '~/lib/utils'
 
-const ChiTieuCard = ({ date, time, money, note }) => {
-  const operator = money >= 0 ? '+' : '-'
+const ChiTieuCard = ({ date, time, money, note, name }) => {
+  const operator = money >= 0 ? '+' : ''
   const formatedMoney = `${operator}${formatNumber(money)}`
   return (
     <Box
@@ -28,16 +28,21 @@ const ChiTieuCard = ({ date, time, money, note }) => {
           <Typography>{time}</Typography>
         </Box>
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Typography
+            sx={{ fontSize: '16px', fontWeight: 'light', textAlign: 'right' }}
+          >
+            {name}
+          </Typography>
           <Typography sx={{ fontSize: '23px', fontWeight: 'bold' }}>
             {formatedMoney}
           </Typography>
+          <Typography
+            sx={{ textAlign: 'right', width: '100%', textWrap: 'wrap' }}
+          >
+            {note}
+          </Typography>
         </Box>
       </Box>
-      <Typography
-        sx={{ textAlign: 'center', width: '100%', wordWrap: 'break-word' }}
-      >
-        {note}
-      </Typography>
     </Box>
   )
 }
