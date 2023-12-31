@@ -1,6 +1,6 @@
 import { Button, Typography } from '@mui/material'
 
-const TableButton = ({ name, width, height }) => {
+const TableButton = ({ name, width, height, props }) => {
   return (
     <Button
       sx={{
@@ -10,7 +10,8 @@ const TableButton = ({ name, width, height }) => {
         borderRadius: '16px',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        ...props
       }}
       onClick={() => {}}
     >
