@@ -6,8 +6,7 @@ import { experimental_extendTheme as extendTheme } from '@mui/material'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import Dashboard from './pages/Dashboard/Dashboard'
-
-// TODO: FONT NOT WORKING
+import '@fontsource/kreon'
 
 const appTheme = extendTheme({
   components: {
