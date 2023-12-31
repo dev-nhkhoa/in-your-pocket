@@ -6,7 +6,7 @@ const TableButton = ({ name, width, height }) => {
       sx={{
         width: width,
         height: height,
-        backgroundColor: '#D9D9D9',
+        backgroundColor: '#000',
         borderRadius: '16px',
         display: 'flex',
         justifyContent: 'center',
@@ -14,7 +14,7 @@ const TableButton = ({ name, width, height }) => {
       }}
       onClick={() => {}}
     >
-      <Typography sx={{ color: '#000', fontSize: '20px' }}>{name}</Typography>
+      <Typography sx={{ color: '#fff', fontSize: '20px' }}>{name}</Typography>
     </Button>
   )
 }

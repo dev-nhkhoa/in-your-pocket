@@ -6,14 +6,12 @@ import { experimental_extendTheme as extendTheme } from '@mui/material'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import Dashboard from './pages/Dashboard/Dashboard'
-import '@fontsource/kreon'
 
 const appTheme = extendTheme({
   components: {
     MuiTypography: {
       styleOverrides: {
         root: {
-          fontFamily: 'Kreon',
           textAlign: 'center',
           lineHeight: 'normal',
           fontStyle: 'normal'
@@ -22,30 +20,15 @@ const appTheme = extendTheme({
     }
   },
   typography: {
-    mainTitle: {
-      fontSize: '36px',
-      fontWeight: '400'
-    },
-    bodyTitle: {
-      fontSize: '30px',
-      fontWeight: '300'
-    }
+    mainTitle: { fontSize: '36px', fontWeight: '400' },
+    bodyTitle: { fontSize: '30px', fontWeight: '300' }
   },
-  useColorSchema: {
-    light: {},
-    dark: {}
-  }
+  useColorSchema: { light: {}, dark: {} }
 })
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Login />
-  },
-  {
-    path: '/dashboard',
-    element: <Dashboard />
-  }
+  { path: '/', element: <Login /> },
+  { path: '/dashboard', element: <Dashboard /> }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
