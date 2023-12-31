@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import Wallet from '../Wallet'
-import { walletList, calcAllBalance } from '~/lib/wallet_list'
+import { calcTotal, getWallets } from '~/lib/wallet_data'
 import { formatNumber } from '~/lib/utils'
 
 const WalletScreen = () => {
@@ -22,13 +22,17 @@ const WalletScreen = () => {
       >
         <Typography sx={{ fontSize: '16px' }}>Số Dư:</Typography>
         <Typography sx={{ fontSize: '18px', fontWeight: 'bold' }}>
-          {formatNumber(calcAllBalance())}
+          {formatNumber(calcTotal())}
         </Typography>
       </Box>
 
-      {walletList.map((wallet, index) => {
+      {getWallets().map((wallet, index) => {
         return (
-          <Wallet key={index} name={wallet.name} balance={wallet.balance} />
+          <Wallet
+            key={index}
+            name={wallet.name}
+            balance={wallet.balance(wallet.name)}
+          />
         )
       })}
     </Box>
