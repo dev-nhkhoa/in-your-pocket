@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { CssBaseline } from '@mui/material'
 import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material'
 import { experimental_extendTheme as extendTheme } from '@mui/material'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Login from './pages/Login/Login'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
+import Login from './pages/Login/Login'
 
 const appTheme = extendTheme({
   components: {
@@ -38,8 +38,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CssVarsProvider theme={appTheme}>
-      <RouterProvider router={router} />
       <CssBaseline />
+      <RouterProvider router={router} />
     </CssVarsProvider>
   </React.StrictMode>
 )
