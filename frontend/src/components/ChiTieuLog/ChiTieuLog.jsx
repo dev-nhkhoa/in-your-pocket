@@ -14,7 +14,7 @@ const ChiTieuLog = () => {
         width: '300px',
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: '#D9D9D9',
+        backgroundColor: 'inYourPocket.section.bgColor',
         borderRadius: '16px',
         p: '10px',
         gap: '10px',

@@ -11,17 +11,21 @@ const appTheme = extendTheme({
   components: {
     MuiTypography: {
       styleOverrides: {
-        root: {
-          textAlign: 'center',
-          lineHeight: 'normal',
-          fontStyle: 'normal'
-        }
+        root: { textAlign: 'center', lineHeight: 'normal', fontStyle: 'normal' }
       }
     }
   },
   typography: {
     mainTitle: { fontSize: '36px', fontWeight: '400' },
     bodyTitle: { fontSize: '30px', fontWeight: '300' }
+  },
+  // WHY BORDER RADIUS NOT WORKING? :d
+  palette: {
+    inYourPocket: {
+      section: { bgColor: '#D9D9D9' },
+      button: { bgColor: '#000', textColor: '#fff' },
+      card: { incomeBgColor: 'green', outcomeBgColor: 'red' }
+    }
   },
   useColorSchema: { light: {}, dark: {} }
 })

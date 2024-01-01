@@ -11,8 +11,7 @@ const WalletScreen = () => {
         width: '300px',
         height: 'fit-content',
         flexDirection: 'column',
-        backgroundColor: '#D9D9D9',
-        color: '#000',
+        backgroundColor: 'inYourPocket.section.bgColor',
         borderRadius: '16px',
         p: '10px'
       }}

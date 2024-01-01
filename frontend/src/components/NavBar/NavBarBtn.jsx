@@ -4,8 +4,8 @@ const NavBarBtn = ({ title, path }) => {
   return (
     <Button
       sx={{
-        backgroundColor: '#000',
-        color: '#fff',
+        backgroundColor: 'inYourPocket.button.bgColor',
+        color: 'inYourPocket.button.textColor',
         borderRadius: '25px',
         width: '90%',
         mb: '7px'
