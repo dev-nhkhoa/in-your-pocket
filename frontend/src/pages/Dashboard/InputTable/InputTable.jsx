@@ -13,7 +13,7 @@ const InputTable = () => {
           display: 'flex',
           flexDirection: 'column',
           gap: '10px',
-          backgroundColor: '#D9D9D9',
+          backgroundColor: 'inYourPocket.section.bgColor',
           borderRadius: '16px',
           p: '10px'
         }}
@@ -30,9 +30,9 @@ const InputTable = () => {
               sx={{
                 width: '210px',
                 height: '25px',
-                backgroundColor: '#000',
+                backgroundColor: 'inYourPocket.button.bgColor',
                 borderRadius: '16px',
-                color: '#fff',
+                color: 'inYourPocket.button.textColor',
                 display: 'flex',
                 justifyContent: 'right',
                 px: '10px'

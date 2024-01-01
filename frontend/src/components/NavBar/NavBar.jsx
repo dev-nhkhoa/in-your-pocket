@@ -12,7 +12,7 @@ const NavBar = () => {
         height: 'fit-content',
         borderRadius: '16px',
         p: '5px',
-        backgroundColor: '#D9D9D9'
+        backgroundColor: 'inYourPocket.section.bgColor'
       }}
     >
       <Typography sx={{ fontSize: '16px', pb: '50px' }}>

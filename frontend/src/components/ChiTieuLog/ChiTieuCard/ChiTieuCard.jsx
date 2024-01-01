@@ -10,7 +10,10 @@ const ChiTieuCard = ({ date, time, money, note, name }) => {
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        backgroundColor: money >= 0 ? 'green' : 'red',
+        backgroundColor:
+          money >= 0
+            ? 'inYourPocket.card.incomeBgColor'
+            : 'inYourPocket.card.outcomeBgColor',
         borderRadius: '26px',
         justifyContent: 'center',
         p: '10px'
