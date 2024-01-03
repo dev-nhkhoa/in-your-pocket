@@ -6,6 +6,8 @@ import { experimental_extendTheme as extendTheme } from '@mui/material'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Login from './pages/Login/Login'
+import { Provider } from 'react-redux'
+import { stateStorage } from './redux/stateStorage'
 
 const appTheme = extendTheme({
   components: {
@@ -39,7 +41,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CssVarsProvider theme={appTheme}>
       <CssBaseline />
-      <RouterProvider router={router} />
+      <Provider store={stateStorage}>
+        <RouterProvider router={router} />
+      </Provider>
     </CssVarsProvider>
   </React.StrictMode>
 )
