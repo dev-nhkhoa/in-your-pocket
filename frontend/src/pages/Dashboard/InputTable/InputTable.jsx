@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import TableButton from './TableButton'
+import ResultScreen from './ResultScreen'
 
 //TODO: XỬ LÍ NHẬP SỐ TỪ TABLE
 
@@ -26,20 +27,7 @@ const InputTable = () => {
               <TableButton name='Thu' width={'101px'} height={'25px'} />
               <TableButton name='Chi' width={'101px'} height={'25px'} />
             </Box>
-            <Box
-              sx={{
-                width: '210px',
-                height: '25px',
-                backgroundColor: 'inYourPocket.button.bgColor',
-                borderRadius: '16px',
-                color: 'inYourPocket.button.textColor',
-                display: 'flex',
-                justifyContent: 'right',
-                px: '10px'
-              }}
-            >
-              đ
-            </Box>
+            <ResultScreen />
           </Box>
         </Box>
         {/* Second Row */}
