@@ -1,9 +1,18 @@
 import { Button, Typography } from '@mui/material'
+import { useDispatch } from 'react-redux'
+import {
+  updateMoneyInput,
+  resetMoneyInput
+} from '~/redux/features/moneyInput/moneyInputSlice'
 
 const TableButton = ({ name, width, height, props }) => {
+  const dispatch = useDispatch()
   /* eslint-disable indent */
   const handleClicked = (name) => {
     switch (name) {
+      case 'A/C':
+        dispatch(resetMoneyInput())
+        break
       case '0':
       case '1':
       case '2':
@@ -14,6 +23,7 @@ const TableButton = ({ name, width, height, props }) => {
       case '7':
       case '8':
       case '9':
+        dispatch(updateMoneyInput(name))
         break
       default:
         break
