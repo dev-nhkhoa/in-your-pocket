@@ -22,14 +22,14 @@ const ThuChiBtn = () => {
     <Box sx={{ display: 'flex', gap: '10px' }}>
       <TableButton
         name='Thu'
-        width={'101px'}
-        height={'25px'}
+        width={'100px'}
+        height={'30px'}
         props={thuBtnWhenClick}
       />
       <TableButton
         name='Chi'
-        width={'101px'}
-        height={'25px'}
+        width={'100px'}
+        height={'30px'}
         props={chiBtnWhenClick}
       />
     </Box>

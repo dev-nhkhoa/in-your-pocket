@@ -12,11 +12,12 @@ const ResultScreen = () => {
     <Box
       sx={{
         width: '210px',
-        height: '25px',
+        height: '30px',
         backgroundColor: 'inYourPocket.button.bgColor',
         borderRadius: '16px',
         color: 'inYourPocket.button.textColor',
         display: 'flex',
+        alignItems: 'center',
         justifyContent: 'right',
         px: '10px'
       }}
