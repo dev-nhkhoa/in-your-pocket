@@ -1,9 +1,15 @@
 import { Box } from '@mui/material'
-import TableButton from './TableButton'
-
-//TODO: XỬ LÍ NHẬP SỐ TỪ TABLE
+import TableButton from './Buttons/TableButton'
+import ResultScreen from './ResultScreen'
+import ThuChiBtn from './Buttons/ThuChiButton'
+import { SETTINGS } from '~/lib/settings'
+import NoteAndWalletButton from './Buttons/NoteAndWalletButton/NoteAndWalletButton'
 
 const InputTable = () => {
+  if (SETTINGS.devMode) {
+    // eslint-disable-next-line no-console
+    console.log('Render Input Table')
+  }
   const buttonWidth = '60px'
   const buttonHeight = '60px'
   return (
@@ -20,55 +26,44 @@ const InputTable = () => {
       >
         {/* First row of the table */}
         <Box sx={{ display: 'flex', gap: '10px' }}>
-          <TableButton name='A/C' width={buttonWidth} height={buttonHeight} />
+          <TableButton name='A/C' width={buttonWidth} height='70px' />
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <Box sx={{ display: 'flex', gap: '10px' }}>
-              <TableButton name='Thu' width={'101px'} height={'25px'} />
-              <TableButton name='Chi' width={'101px'} height={'25px'} />
-            </Box>
-            <Box
-              sx={{
-                width: '210px',
-                height: '25px',
-                backgroundColor: 'inYourPocket.button.bgColor',
-                borderRadius: '16px',
-                color: 'inYourPocket.button.textColor',
-                display: 'flex',
-                justifyContent: 'right',
-                px: '10px'
-              }}
-            >
-              đ
-            </Box>
+            <ThuChiBtn />
+            <ResultScreen />
           </Box>
         </Box>
         {/* Second Row */}
         <Box sx={{ display: 'flex', gap: '10px' }}>
+          <NoteAndWalletButton />
+          <TableButton name='' width={buttonWidth} height={buttonHeight} />
+          <TableButton name='*' width={buttonWidth} height={buttonHeight} />
+        </Box>
+        <Box sx={{ display: 'flex', gap: '10px' }}>
           <TableButton name='7' width={buttonWidth} height={buttonHeight} />
           <TableButton name='8' width={buttonWidth} height={buttonHeight} />
           <TableButton name='9' width={buttonWidth} height={buttonHeight} />
-          <TableButton name='Ví' width={buttonWidth} height={buttonHeight} />
+          <TableButton name='/' width={buttonWidth} height={buttonHeight} />
         </Box>
         {/* Third Row */}
         <Box sx={{ display: 'flex', gap: '10px' }}>
           <TableButton name='4' width={buttonWidth} height={buttonHeight} />
           <TableButton name='5' width={buttonWidth} height={buttonHeight} />
           <TableButton name='6' width={buttonWidth} height={buttonHeight} />
-          <TableButton name='Ví' width={buttonWidth} height={buttonHeight} />
+          <TableButton name='+' width={buttonWidth} height={buttonHeight} />
         </Box>
         {/* Second Row */}
         <Box sx={{ display: 'flex', gap: '10px' }}>
           <TableButton name='1' width={buttonWidth} height={buttonHeight} />
           <TableButton name='2' width={buttonWidth} height={buttonHeight} />
           <TableButton name='3' width={buttonWidth} height={buttonHeight} />
-          <TableButton name='Ví' width={buttonWidth} height={buttonHeight} />
+          <TableButton name='-' width={buttonWidth} height={buttonHeight} />
         </Box>
         {/* Second Row */}
         <Box sx={{ display: 'flex', gap: '10px' }}>
           <TableButton name='0' width={buttonWidth} height={buttonHeight} />
           <TableButton name='' width={buttonWidth} height={buttonHeight} />
           <Box>
-            <TableButton name='ENTER' width={'140px'} height={'60px'} />
+            <TableButton name='ENTER' width={'135px'} height={'60px'} />
           </Box>
         </Box>
       </Box>

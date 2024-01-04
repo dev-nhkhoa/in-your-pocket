@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "IYP-0001",
+    "username": "anhkhoa000zz",
+    "password": "khoa@@@2004",
+    "wallet": [
+      {
+        "name": "Ví Cá Nhân",
+        "balance": 0,
+        "transactions": [
+          {
+            "moneyChange": 100000,
+            "note": "Chuyển Quỹ"
+          }
+        ]
+      }
+    ]
+  },
+  {}
+]
