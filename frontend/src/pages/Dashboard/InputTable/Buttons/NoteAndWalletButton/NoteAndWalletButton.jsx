@@ -3,6 +3,7 @@ import TableButton from '../TableButton'
 import { SETTINGS } from '~/lib/settings'
 import { useSelector } from 'react-redux'
 import WalletSelectDialog from './WalletSelectDialog'
+import NoteDialog from './NoteDialog'
 
 const NoteAndWalletButton = () => {
   const wallet = useSelector((state) => state.chosenWallet.wallet)
@@ -17,6 +18,7 @@ const NoteAndWalletButton = () => {
       <TableButton name='Ví' width={'60px'} height={'60px'} />
       <WalletSelectDialog />
       <TableButton name='Note' width={'60px'} height={'60px'} />
+      <NoteDialog />
     </Box>
   )
 }

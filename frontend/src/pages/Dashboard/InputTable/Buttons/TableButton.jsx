@@ -7,6 +7,7 @@ import {
 } from '~/redux/features/moneyInput/moneyInputSlice'
 import { toggleChi, toggleThu } from '~/redux/features/thuChi/thuChiSlice'
 import { toggleOnDialog } from '~/redux/features/chosenWallet/chosenWalletSlice'
+import { toggleOnNote } from '~/redux/features/note/noteSlice'
 
 const TableButton = ({ name, width, height, props }) => {
   if (SETTINGS.devMode) {
@@ -17,6 +18,9 @@ const TableButton = ({ name, width, height, props }) => {
   /* eslint-disable indent */
   const handleClicked = (name) => {
     switch (name) {
+      case 'Note':
+        dispatch(toggleOnNote())
+        break
       case 'Ví':
         dispatch(toggleOnDialog())
         break
