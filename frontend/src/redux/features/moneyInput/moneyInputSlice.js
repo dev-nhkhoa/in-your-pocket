@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { SETTINGS } from '~/lib/settings'
 
 const initialState = {
   money: '0'
@@ -11,7 +12,7 @@ const moneyInputSlice = createSlice({
     updateMoneyInput: (state, action) => {
       let prevMoney = state.money
       let userInput = action.payload
-      if (prevMoney.length >= 10) {
+      if (prevMoney.length >= SETTINGS.maxNumberLength) {
         state.money = prevMoney
         return
       }
