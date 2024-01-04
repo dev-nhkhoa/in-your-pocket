@@ -1,9 +1,9 @@
 import { Box } from '@mui/material'
-import TableButton from './TableButton'
+import TableButton from './Buttons/TableButton'
 import ResultScreen from './ResultScreen'
-import ThuChiBtn from './ThuChiButton'
+import ThuChiBtn from './Buttons/ThuChiButton'
 import { SETTINGS } from '~/lib/settings'
-import NoteAndWalletButton from './NoteAndWalletButton'
+import NoteAndWalletButton from './Buttons/NoteAndWalletButton/NoteAndWalletButton'
 
 const InputTable = () => {
   if (SETTINGS.devMode) {

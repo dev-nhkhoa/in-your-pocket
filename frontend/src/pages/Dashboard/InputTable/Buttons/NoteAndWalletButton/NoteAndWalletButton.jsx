@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import TableButton from './TableButton'
+import TableButton from '../TableButton'
 import { SETTINGS } from '~/lib/settings'
 import { useSelector } from 'react-redux'
 import WalletSelectDialog from './WalletSelectDialog'
