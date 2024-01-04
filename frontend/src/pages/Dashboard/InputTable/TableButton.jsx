@@ -6,6 +6,7 @@ import {
   resetMoneyInput
 } from '~/redux/features/moneyInput/moneyInputSlice'
 import { toggleChi, toggleThu } from '~/redux/features/thuChi/thuChiSlice'
+import { toggleOnDialog } from '~/redux/features/chosenWallet/chosenWalletSlice'
 
 const TableButton = ({ name, width, height, props }) => {
   if (SETTINGS.devMode) {
@@ -16,6 +17,9 @@ const TableButton = ({ name, width, height, props }) => {
   /* eslint-disable indent */
   const handleClicked = (name) => {
     switch (name) {
+      case 'Ví':
+        dispatch(toggleOnDialog())
+        break
       case 'Thu':
         dispatch(toggleThu())
         break
@@ -23,7 +27,9 @@ const TableButton = ({ name, width, height, props }) => {
         dispatch(toggleChi())
         break
       case 'A/C':
+        // return default settings
         dispatch(resetMoneyInput())
+        dispatch(toggleThu())
         break
       case '0':
       case '1':
@@ -47,7 +53,7 @@ const TableButton = ({ name, width, height, props }) => {
         width: width,
         height: height,
         backgroundColor: 'inYourPocket.button.bgColor',
-        borderRadius: '16px',
+        borderRadius: '25px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
