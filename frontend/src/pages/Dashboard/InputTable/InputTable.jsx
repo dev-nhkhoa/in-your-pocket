@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import TableButton from './TableButton'
 import ResultScreen from './ResultScreen'
-import ThuChiBtn from './ThuChiBtn'
+import ThuChiBtn from './ThuChiButton'
 import { SETTINGS } from '~/lib/settings'
 
 //TODO: XỬ LÍ NHẬP SỐ TỪ TABLE
