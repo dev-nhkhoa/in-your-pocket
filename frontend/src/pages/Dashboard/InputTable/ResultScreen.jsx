@@ -1,7 +1,12 @@
 import { Box } from '@mui/material'
 import { useSelector } from 'react-redux'
+import { SETTINGS } from '~/lib/settings'
 
 const ResultScreen = () => {
+  if (SETTINGS.devMode) {
+    // eslint-disable-next-line no-console
+    console.log('Render ResultScreen')
+  }
   const moneyInput = useSelector((state) => state.moneyInput.money)
   return (
     <Box

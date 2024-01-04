@@ -1,10 +1,16 @@
 import { Box } from '@mui/material'
 import TableButton from './TableButton'
 import ResultScreen from './ResultScreen'
+import ThuChiBtn from './ThuChiBtn'
+import { SETTINGS } from '~/lib/settings'
 
 //TODO: XỬ LÍ NHẬP SỐ TỪ TABLE
 
 const InputTable = () => {
+  if (SETTINGS.devMode) {
+    // eslint-disable-next-line no-console
+    console.log('Render Input Table')
+  }
   const buttonWidth = '60px'
   const buttonHeight = '60px'
   return (
@@ -23,10 +29,7 @@ const InputTable = () => {
         <Box sx={{ display: 'flex', gap: '10px' }}>
           <TableButton name='A/C' width={buttonWidth} height={buttonHeight} />
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <Box sx={{ display: 'flex', gap: '10px' }}>
-              <TableButton name='Thu' width={'101px'} height={'25px'} />
-              <TableButton name='Chi' width={'101px'} height={'25px'} />
-            </Box>
+            <ThuChiBtn />
             <ResultScreen />
           </Box>
         </Box>
